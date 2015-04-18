@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'NTimer', :exclusive => true do
+  pod "NTimer", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "NTimer", :path => "../"
+
+  pod 'Specta'
+  pod 'Expecta'
+end
