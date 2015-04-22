@@ -7,7 +7,7 @@
 //
 
 #import "NViewController.h"
-
+@import NTimer;
 @interface NViewController ()
 
 @end
