@@ -40,6 +40,6 @@ describe(@"these will pass", ^{
 //             done();
 //         });
 //     });
-// });
+});
 
 SpecEnd
