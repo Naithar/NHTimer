@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		352E0D9FBE688BA6ECF07214 /* Pods_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC07599A5B1451100393AFC9 /* Pods_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -23,7 +22,8 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		693468890077B603E6DF0CBA /* Pods_NTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC491D6DE8E0B0A6EE48F44B /* Pods_NTimer.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		68B26D915FB47ABB14439A71 /* libPods-NTimer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13E2BD98D558BA5EBFADA9EC /* libPods-NTimer.a */; };
+		998BAEF441B9790D57893733 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4996DC20A2A2FE6215870AD9 /* libPods-Tests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +38,9 @@
 
 /* Begin PBXFileReference section */
 		079F889761379C86AC4CBA81 /* NTimer.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = NTimer.podspec; path = ../NTimer.podspec; sourceTree = "<group>"; };
+		13E2BD98D558BA5EBFADA9EC /* libPods-NTimer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NTimer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40AD1362FD2D1420B37C05A9 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
+		4996DC20A2A2FE6215870AD9 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* NTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -61,12 +63,10 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		9E1A55BD301186A8CC7CBF59 /* Pods-NTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NTimer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NTimer/Pods-NTimer.debug.xcconfig"; sourceTree = "<group>"; };
-		AC491D6DE8E0B0A6EE48F44B /* Pods_NTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1FC425F188B1B2C865EF5A2 /* Pods-NTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NTimer.release.xcconfig"; path = "Pods/Target Support Files/Pods-NTimer/Pods-NTimer.release.xcconfig"; sourceTree = "<group>"; };
 		D970EA260652386A5E8023E4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		F5F5D19EC06073C6285FC22C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		FB904E1E1CEED26B3ECEAEC1 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		FC07599A5B1451100393AFC9 /* Pods_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +77,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				693468890077B603E6DF0CBA /* Pods_NTimer.framework in Frameworks */,
+				68B26D915FB47ABB14439A71 /* libPods-NTimer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +88,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				352E0D9FBE688BA6ECF07214 /* Pods_Tests.framework in Frameworks */,
+				998BAEF441B9790D57893733 /* libPods-Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,8 +134,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				AC491D6DE8E0B0A6EE48F44B /* Pods_NTimer.framework */,
-				FC07599A5B1451100393AFC9 /* Pods_Tests.framework */,
+				13E2BD98D558BA5EBFADA9EC /* libPods-NTimer.a */,
+				4996DC20A2A2FE6215870AD9 /* libPods-Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -207,7 +207,6 @@
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
 				B044489AA5B4D3940490350D /* Copy Pods Resources */,
-				177CD572BF76B0930D026099 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -227,7 +226,6 @@
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
 				50EE9B60945B0998B1CE957C /* Copy Pods Resources */,
-				CA8D347019AED9DA7C5246D3 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -296,21 +294,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		177CD572BF76B0930D026099 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NTimer/Pods-NTimer-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		3EAE0419C45358B7018AB222 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -369,21 +352,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NTimer/Pods-NTimer-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CA8D347019AED9DA7C5246D3 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

@@ -7,7 +7,8 @@
 //
 
 #import "NViewController.h"
-@import NTimer;
+#import <NHTimer.h>
+
 @interface NViewController ()
 
 @end
@@ -18,6 +19,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+
+//    NHTimer *timer = [[NHTimer alloc] init]
 }
 
 - (void)didReceiveMemoryWarning
