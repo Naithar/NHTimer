@@ -21,7 +21,6 @@
 
 @property (nonatomic, assign) BOOL isRunning;
 
-
 @end
 
 @implementation NHTimer
