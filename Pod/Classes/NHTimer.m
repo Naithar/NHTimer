@@ -105,7 +105,8 @@
 }
 
 - (void)start {
-    if (self.timerInterval <= 0) {
+    if (self.timerInterval <= 0
+        || self.isRunning) {
         return;
     }
 
