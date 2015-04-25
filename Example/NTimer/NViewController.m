@@ -20,7 +20,11 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 
-//    NHTimer *timer = [[NHTimer alloc] init]
+    NHTimer *timer = [[NHTimer alloc] initWithRepeatCount:5 interval:1 timerBlock:^(NHTimer *timer) {
+        NSLog(@"timer tick %@", timer);
+    }];
+
+    [timer start];
 }
 
 - (void)didReceiveMemoryWarning
