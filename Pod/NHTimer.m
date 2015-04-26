@@ -151,7 +151,8 @@
                                        selector:@selector(timerMain:)
                                        userInfo:nil repeats:YES];
 
-    [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+    [[NSRunLoop mainRunLoop] addTimer:self.timer
+                              forMode:NSRunLoopCommonModes];
 
     if (self.startTimerBlock) {
         self.startTimerBlock(self);
