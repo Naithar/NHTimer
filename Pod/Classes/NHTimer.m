@@ -159,13 +159,15 @@
 }
 
 - (void)stop {
+
+    if (self.stopTimerBlock
+        && self.isRunning) {
+        self.stopTimerBlock(self);
+    }
+
     self.isRunning = NO;
     [self.timer invalidate];
     self.timer = nil;
-
-    if (self.stopTimerBlock) {
-        self.stopTimerBlock(self);
-    }
 }
 
 - (void)timerMain:(id)sender {
