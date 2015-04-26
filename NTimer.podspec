@@ -10,16 +10,15 @@
 Pod::Spec.new do |s|
   s.name             = "NTimer"
   s.version          = "0.1.0"
-  s.summary          = "custom timer for ios"
+  s.summary          = "Сustom block-based timer"
   s.description      = <<-DESC
-                       custom timer with start-stop functionality, repeat count
+                       Custom block-based timer with repeat functionallity.
                        DESC
   s.homepage         = "https://github.com/naithar/NTimer"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Naithar" => "devias.naith@gmail.com" }
   s.source           = { :git => "https://github.com/naithar/NTimer.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  # s.social_media_url = 'https://twitter.com/naithar'
 
   s.platform     = :ios, '7.0'
   s.requires_arc = true
