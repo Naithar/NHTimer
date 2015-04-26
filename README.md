@@ -4,14 +4,31 @@
 [![Version](https://img.shields.io/cocoapods/v/NTimer.svg?style=flat)](http://cocoapods.org/pods/NTimer)
 [![Coverage Status](https://coveralls.io/repos/Naithar/NTimer/badge.svg?branch=master)](https://coveralls.io/r/Naithar/NTimer?branch=master)
 
-## Usage
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Author
 
 Naithar, devias.naith@gmail.com
 
+## Setup
+* Add ```pod 'NTimer', :git => 'https://github.com/naithar/NTimer.git'``` to your [Podfile](http://cocoapods.org/)
+* Run ```pod install```
+* Open created ```.xcworkspace``` file
+* Add ```#import <NHTimer.h>``` in your source code
+
+## Usage
+```objc
+[[[[[NHTimer timer] repeat:5] interval:0.1] timerBlock:^(NHTimer *timer) {
+    ...your code...
+}] start];
+```
+
+```objc
+[[NHTimer alloc] initWithRepeatCount:5 interval:0.1 timerBlock:^(NHTimer *timer) {
+    ...your code...
+}];
+```
+
+
 ## License
 
-NTimer is available under the MIT license. See the LICENSE file for more info.
+NAsync is available under the MIT license. See the LICENSE file for more info.

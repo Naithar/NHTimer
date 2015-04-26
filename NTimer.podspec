@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "NTimer"
-  s.version          = "0.1.0"
+  s.version          = "0.5.0"
   s.summary          = "Сustom block-based timer"
   s.description      = <<-DESC
                        Custom block-based timer with repeat functionallity.
