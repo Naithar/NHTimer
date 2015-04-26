@@ -6,40 +6,33 @@
 //  Copyright (c) 2014 Naithar. All rights reserved.
 //
 
+#import <NHTimer.h>
+
 SpecBegin(InitialSpecs)
 
-// describe(@"these will fail", ^{
+describe(@"timer start", ^{
+    it(@"will run 5 times", ^{
 
-//     it(@"can do maths", ^{
-//         expect(1).to.equal(2);
-//     });
+                    __block NSInteger count = 0;
 
-//     it(@"can read", ^{
-//         expect(@"number").to.equal(@"string");
-//     });
-    
-//     it(@"will wait for 10 seconds and fail", ^{
-//         waitUntil(^(DoneCallback done) {
-        
-//         });
-//     });
-// });
+        waitUntil(^(DoneCallback done) {
 
-describe(@"these will pass", ^{
-    
-    it(@"can do maths", ^{
-        expect(1).beLessThan(23);
+            NHTimer *timer = [[NHTimer alloc] initWithRepeatCount:5 interval:1 timerBlock:^(NHTimer *timer) {
+                count++;
+            }];
+
+            [timer stopBlock:^(NHTimer *timer) {
+                done();
+            }];
+            
+            [timer start];
+            
+        });
+
+
+        expect(count).to.equal(5);
+
     });
-    
-    it(@"can read", ^{
-        expect(@"team").toNot.contain(@"I");
-    });
-    
-//     it(@"will wait and succeed", ^AsyncBlock {
-//         waitUntil(^(DoneCallback done) {
-//             done();
-//         });
-//     });
 });
 
 SpecEnd

@@ -13,6 +13,7 @@
 @property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic, copy) NHTimerBlock timerTickBlock;
 @property (nonatomic, copy) NHTimerBlock startTimerBlock;
+@property (nonatomic, copy) NHTimerBlock stopTimerBlock;
 
 @property (nonatomic, assign) NSInteger repeatCount;
 @property (nonatomic, assign) NSTimeInterval timerInterval;
@@ -29,7 +30,8 @@
     return [self initWithRepeatCount:-1
                             interval:0
                           startBlock:nil
-                          timerBlock:nil];
+                          timerBlock:nil
+                      stopTimerBlock:nil];
 }
 
 - (instancetype)initWithInterval:(NSTimeInterval)interval
@@ -45,7 +47,8 @@
     return [self initWithRepeatCount:-1
                             interval:interval
                           startBlock:startBlock
-                          timerBlock:timerBlock];
+                          timerBlock:timerBlock
+                      stopTimerBlock:nil];
 }
 
 - (instancetype)initWithRepeatCount:(NSInteger)count
@@ -54,19 +57,22 @@
     return [self initWithRepeatCount:count
                             interval:interval
                           startBlock:nil
-                          timerBlock:timerBlock];
+                          timerBlock:timerBlock
+                      stopTimerBlock:nil];
 }
 
 - (instancetype)initWithRepeatCount:(NSInteger)count
                            interval:(NSTimeInterval)interval
                          startBlock:(NHTimerBlock)startBlock
-                         timerBlock:(NHTimerBlock)timerBlock {
+                         timerBlock:(NHTimerBlock)timerBlock
+                     stopTimerBlock:(NHTimerBlock)stopBlock {
     self = [super init];
     if (self) {
         _repeatCount = count;
         _timerInterval = interval;
         _startTimerBlock = startBlock;
         _timerTickBlock = timerBlock;
+        _stopTimerBlock = stopBlock;
     }
     return self;
 }
@@ -103,6 +109,13 @@
     return self;
 }
 
+- (instancetype)stopBlock:(NHTimerBlock)block {
+    if (!self.isRunning) {
+        self.stopTimerBlock = block;
+    }
+    return self;
+}
+
 - (void)start {
     if (self.timerInterval <= 0
         || self.isRunning) {
@@ -110,11 +123,6 @@
     }
 
     self.isRunning = YES;
-
-    __weak __typeof(self) weakSelf = self;
-    if (weakSelf.startTimerBlock) {
-        weakSelf.startTimerBlock(weakSelf);
-    }
 
     self.currentRepeatCount = self.repeatCount;
 
@@ -124,12 +132,20 @@
                                        userInfo:nil repeats:YES];
 
     [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+
+    if (self.startTimerBlock) {
+        self.startTimerBlock(self);
+    }
 }
 
 - (void)stop {
     self.isRunning = NO;
     [self.timer invalidate];
     self.timer = nil;
+
+    if (self.stopTimerBlock) {
+        self.stopTimerBlock(self);
+    }
 }
 
 - (void)timerMain:(id)sender {
@@ -141,16 +157,17 @@
         return;
     }
 
-    __weak __typeof(self) weakSelf = self;
-    if (weakSelf.timerTickBlock) {
-        weakSelf.timerTickBlock(weakSelf);
+    if (self.timerTickBlock) {
+        self.timerTickBlock(self);
     }
 }
 
 - (void)dealloc {
     [self stop];
+    self.stopTimerBlock = nil;
     self.startTimerBlock = nil;
     self.timerTickBlock = nil;
+
 
 }
 
