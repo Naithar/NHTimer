@@ -44,11 +44,21 @@
 - (instancetype)initWithInterval:(NSTimeInterval)interval
                       startBlock:(NHTimerBlock)startBlock
                       timerBlock:(NHTimerBlock)timerBlock {
+    return [self initWithInterval:interval
+                       startBlock:startBlock
+                       timerBlock:timerBlock
+                        stopBlock:nil];
+}
+
+- (instancetype)initWithInterval:(NSTimeInterval)interval
+                      startBlock:(NHTimerBlock)startBlock
+                      timerBlock:(NHTimerBlock)timerBlock
+                       stopBlock:(NHTimerBlock)stopBlock {
     return [self initWithRepeatCount:-1
                             interval:interval
                           startBlock:startBlock
                           timerBlock:timerBlock
-                      stopTimerBlock:nil];
+                      stopTimerBlock:stopBlock];
 }
 
 - (instancetype)initWithRepeatCount:(NSInteger)count
@@ -57,6 +67,16 @@
     return [self initWithRepeatCount:count
                             interval:interval
                           startBlock:nil
+                          timerBlock:timerBlock];
+}
+
+- (instancetype)initWithRepeatCount:(NSInteger)count
+                           interval:(NSTimeInterval)interval
+                         startBlock:(NHTimerBlock)startBlock
+                         timerBlock:(NHTimerBlock)timerBlock {
+    return [self initWithRepeatCount:count
+                            interval:interval
+                          startBlock:startBlock
                           timerBlock:timerBlock
                       stopTimerBlock:nil];
 }

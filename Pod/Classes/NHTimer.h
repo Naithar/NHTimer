@@ -25,8 +25,18 @@ typedef void(^NHTimerBlock)(NHTimer *timer);
                       startBlock:(NHTimerBlock)startBlock
                       timerBlock:(NHTimerBlock)timerBlock;
 
+- (instancetype)initWithInterval:(NSTimeInterval)interval
+                      startBlock:(NHTimerBlock)startBlock
+                      timerBlock:(NHTimerBlock)timerBlock
+                       stopBlock:(NHTimerBlock)stopBlock;
+
 - (instancetype)initWithRepeatCount:(NSInteger)count
                            interval:(NSTimeInterval)interval
+                         timerBlock:(NHTimerBlock)timerBlock;
+
+- (instancetype)initWithRepeatCount:(NSInteger)count
+                           interval:(NSTimeInterval)interval
+                         startBlock:(NHTimerBlock)startBlock
                          timerBlock:(NHTimerBlock)timerBlock;
 
 - (instancetype)initWithRepeatCount:(NSInteger)count
