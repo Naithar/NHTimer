@@ -22,6 +22,8 @@
 
 @property (nonatomic, assign) BOOL isRunning;
 
+@property (nonatomic, assign) UIBackgroundTaskIdentifier taskIdentifier;
+
 @end
 
 @implementation NHTimer
@@ -146,6 +148,9 @@
 
     self.currentRepeatCount = self.repeatCount;
 
+    self.taskIdentifier = UIBackgroundTaskInvalid;
+    self.taskIdentifier = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{}];
+
     self.timer = [NSTimer timerWithTimeInterval:self.timerInterval
                                          target:self
                                        selector:@selector(timerMain:)
@@ -153,6 +158,8 @@
 
     [[NSRunLoop mainRunLoop] addTimer:self.timer
                               forMode:NSRunLoopCommonModes];
+    [[NSRunLoop mainRunLoop] addTimer:self.timer
+                              forMode:UITrackingRunLoopMode];
 
     if (self.startTimerBlock) {
         self.startTimerBlock(self);
