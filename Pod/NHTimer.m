@@ -173,6 +173,7 @@
         self.stopTimerBlock(self);
     }
 
+    self.taskIdentifier = UIBackgroundTaskInvalid;
     self.isRunning = NO;
     [self.timer invalidate];
     self.timer = nil;
