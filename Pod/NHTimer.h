@@ -15,6 +15,7 @@ typedef void(^NHTimerBlock)(NHTimer *timer);
 
 @interface NHTimer : NSObject
 
+@property (nonatomic, readonly, assign) NSInteger currentRepeatCount;
 @property (nonatomic, readonly, assign) BOOL isRunning;
 
 
