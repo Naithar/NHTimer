@@ -1,6 +1,6 @@
 # NHTimer
 
-[![CI Status](http://img.shields.io/travis/Naithar/NTimer.svg?style=flat)](https://travis-ci.org/Naithar/NTimer)
+[![Build Status](https://travis-ci.org/Naithar/NHTimer.svg?branch=master)](https://travis-ci.org/Naithar/NHTimer)
 [![Version](https://img.shields.io/cocoapods/v/NTimer.svg?style=flat)](http://cocoapods.org/pods/NTimer)
 [![Coverage Status](https://coveralls.io/repos/Naithar/NTimer/badge.svg?branch=master)](https://coveralls.io/r/Naithar/NTimer?branch=master)
 
