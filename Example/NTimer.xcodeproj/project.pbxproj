@@ -37,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		079F889761379C86AC4CBA81 /* NTimer.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = NTimer.podspec; path = ../NTimer.podspec; sourceTree = "<group>"; };
+		079F889761379C86AC4CBA81 /* NHTimer.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = NHTimer.podspec; path = ../NHTimer.podspec; sourceTree = "<group>"; };
 		13E2BD98D558BA5EBFADA9EC /* libPods-NTimer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NTimer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40AD1362FD2D1420B37C05A9 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		4996DC20A2A2FE6215870AD9 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,7 +188,7 @@
 		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				079F889761379C86AC4CBA81 /* NTimer.podspec */,
+				079F889761379C86AC4CBA81 /* NHTimer.podspec */,
 				D970EA260652386A5E8023E4 /* README.md */,
 				F5F5D19EC06073C6285FC22C /* LICENSE */,
 			);

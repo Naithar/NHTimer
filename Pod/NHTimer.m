@@ -8,6 +8,8 @@
 
 #import "NHTimer.h"
 
+const NSInteger kNHTimerInfiniteRepeatCount = -1;
+
 @interface NHTimer ()
 
 @property (nonatomic, strong) NSTimer *timer;
@@ -29,7 +31,7 @@
 @implementation NHTimer
 
 - (instancetype)init {
-    return [self initWithRepeatCount:-1
+    return [self initWithRepeatCount:kNHTimerInfiniteRepeatCount
                             interval:0
                           startBlock:nil
                           timerBlock:nil
@@ -56,7 +58,7 @@
                       startBlock:(NHTimerBlock)startBlock
                       timerBlock:(NHTimerBlock)timerBlock
                        stopBlock:(NHTimerBlock)stopBlock {
-    return [self initWithRepeatCount:-1
+    return [self initWithRepeatCount:kNHTimerInfiniteRepeatCount
                             interval:interval
                           startBlock:startBlock
                           timerBlock:timerBlock
@@ -183,7 +185,7 @@
     if (self.currentRepeatCount > 0) {
         self.currentRepeatCount--;
     }
-    else if (self.repeatCount != -1) {
+    else if (self.repeatCount != kNHTimerInfiniteRepeatCount) {
         [self stop];
         return;
     }

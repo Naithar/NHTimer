@@ -3,11 +3,11 @@ source 'https://github.com/CocoaPods/Specs.git'
 plugin 'slather'
 
 target 'NTimer', :exclusive => true do
-  pod "NTimer", :path => "../"
+  pod "NHTimer", :path => "../"
 end
 
 target 'Tests', :exclusive => true do
-  pod "NTimer", :path => "../"
+  pod "NHTimer", :path => "../"
 
   pod 'Specta'
   pod 'Expecta'

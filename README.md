@@ -1,4 +1,4 @@
-# NTimer
+# NHTimer
 
 [![CI Status](http://img.shields.io/travis/Naithar/NTimer.svg?style=flat)](https://travis-ci.org/Naithar/NTimer)
 [![Version](https://img.shields.io/cocoapods/v/NTimer.svg?style=flat)](http://cocoapods.org/pods/NTimer)
@@ -10,10 +10,10 @@
 Naithar, devias.naith@gmail.com
 
 ## Setup
-* Add ```pod 'NTimer', :git => 'https://github.com/naithar/NTimer.git'``` to your [Podfile](http://cocoapods.org/)
+* Add ```pod 'NTimer', :git => 'https://github.com/naithar/NHTimer.git'``` to your [Podfile](http://cocoapods.org/)
 * Run ```pod install```
 * Open created ```.xcworkspace``` file
-* Add ```#import <NHTimer.h>``` in your source code
+* Add ```#import <NHTimer/NHTimer.h>``` in your source code
 
 ## Usage
 ```objc
@@ -31,4 +31,4 @@ Naithar, devias.naith@gmail.com
 
 ## License
 
-NAsync is available under the MIT license. See the LICENSE file for more info.
+NHTimer is available under the MIT license. See the LICENSE file for more info.

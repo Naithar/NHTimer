@@ -19,7 +19,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-
+    
     NHTimer *timer = [[NHTimer alloc] initWithRepeatCount:50
                                                  interval:1
                                                timerBlock:^(NHTimer *timer) {
