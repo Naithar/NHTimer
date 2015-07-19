@@ -4,6 +4,7 @@
 
 language: objective-c
 # cache: cocoapods
+rvm: 1.9.3
 podfile: Example/Podfile
 before_install:
 - gem install cocoapods slather activesupport
