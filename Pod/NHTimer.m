@@ -150,6 +150,7 @@ const NSInteger kNHTimerInfiniteRepeatCount = -1;
 
     self.currentRepeatCount = self.repeatCount;
 
+    [[UIApplication sharedApplication] endBackgroundTask:self.taskIdentifier];
     self.taskIdentifier = UIBackgroundTaskInvalid;
     self.taskIdentifier = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{}];
 
@@ -175,6 +176,7 @@ const NSInteger kNHTimerInfiniteRepeatCount = -1;
         self.stopTimerBlock(self);
     }
 
+    [[UIApplication sharedApplication] endBackgroundTask:self.taskIdentifier];
     self.taskIdentifier = UIBackgroundTaskInvalid;
     self.isRunning = NO;
     [self.timer invalidate];
