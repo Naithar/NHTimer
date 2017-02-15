@@ -155,7 +155,7 @@ const NSInteger kNHTimerInfiniteRepeatCount = -1;
     
     __weak __typeof(self) weakSelf = self;
     self.taskIdentifier = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
-        __strong __typeof(self) strongSelf = weakSelf; 
+        __strong __typeof(weakSelf) strongSelf = weakSelf; 
         [[UIApplication sharedApplication] endBackgroundTask:strongSelf.taskIdentifier];
         strongSelf.taskIdentifier = UIBackgroundTaskInvalid;
     }];
