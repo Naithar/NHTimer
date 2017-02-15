@@ -152,7 +152,13 @@ const NSInteger kNHTimerInfiniteRepeatCount = -1;
 
     [[UIApplication sharedApplication] endBackgroundTask:self.taskIdentifier];
     self.taskIdentifier = UIBackgroundTaskInvalid;
-    self.taskIdentifier = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{}];
+    
+    __weak __typeof(self) weakSelf = self;
+    self.taskIdentifier = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
+        __strong __typeof(self) strongSelf = weakSelf; 
+        [[UIApplication sharedApplication] endBackgroundTask:strongSelf.taskIdentifier];
+        strongSelf.taskIdentifier = UIBackgroundTaskInvalid;
+    }];
 
     self.timer = [NSTimer timerWithTimeInterval:self.timerInterval
                                          target:self
