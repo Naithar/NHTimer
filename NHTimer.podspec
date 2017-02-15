@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "NHTimer"
-  s.version          = "0.5.1"
+  s.version          = "0.5.2"
   s.summary          = "Сustom block-based timer."
   s.homepage         = "https://github.com/naithar/NHTimer"
   s.license          = 'MIT'
